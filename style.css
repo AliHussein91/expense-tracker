@@ -136,8 +136,9 @@ main form .input-group select {
 main form #add-expense {
   border: none;
   outline: none;
-  height: 100%;
+  height: 98%;
   width: 12%;
+  margin-bottom: 1%;
   font-size: 0.9em;
   text-transform: uppercase;
   /* letter-spacing: 2.5px; */
@@ -163,19 +164,32 @@ main .table {
   height: 70%;
   width: 100%;
   padding: 1% 5%;
-  overflow: scroll;
+  padding-top: 0;
   color: white;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   text-align: center;
   table-layout: fixed;
+}
+
+main .table::-webkit-scrollbar {
+  display: none;
 }
 
 table {
   width: 100%;
 }
 
+.expense-table-header {
+  position: relative;
+}
+
 tr.expense-table-header-row {
   height: 40px;
   background-color: rgb(55 65 78);
+  position: sticky;
+  top: 0;
 }
 
 tr.expense-table-body-row {
@@ -183,4 +197,13 @@ tr.expense-table-body-row {
   background-color: rgb(83 97 116);
 }
 
+.delete-expense-btn {
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  font-size: 1em;
+}
 
+.delete-expense-btn:hover {
+  /* transform: translateY(-2px); */
+  font-size: 1.1em;
+}

@@ -16,7 +16,7 @@
         <h2>Add New Item:</h2>
         <div class="input-group">
           <label for="expense-types">Type:</label>
-          <select id="expense-types" name="Type">
+          <select id="expense-types" name="Type" required>
             <option value="Cash">Cash</option>
             <option value="Credit Card">Credit Card</option>
             <option value="Bank Transfer">Bank Transfer</option>
@@ -24,15 +24,15 @@
         </div>
         <div class="input-group">
           <label for="expense-type">Date:</label>
-          <input id="expense-date" type="date" />
+          <input id="expense-date" value="" type="date" required/>
         </div>
         <div class="input-group">
           <label for="expense-name">Name:</label>
-          <input id="expense-name" type="text" />
+          <input id="expense-name" type="text" required/>
         </div>
         <div class="input-group">
           <label for="expense-amount">Amount:</label>
-          <input id="expense-amount" type="number" min="1" step="any" />
+          <input id="expense-amount" type="number" min="1" step="any" required/>
         </div>
         <div class="submit-expense">
           <button id="add-expense">Add Expense</button>
@@ -57,13 +57,7 @@
             </tr>
           </thead>
           <tbody class="expense-table-body">
-            <tr class="expense-table-body-row">
-              <td>Cash</td>
-              <td>Car Installment</td>
-              <td>01/02/2023</td>
-              <td>500$</td>
-              <td>❌</td>
-            </tr>
+
           </tbody>
         </table>
       </div>
