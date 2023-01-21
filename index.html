@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="title">
+      <h1>Expense Tracker</h1>
+    </header>
+    <main class="main">
+      <form class="add-items">
+        <h2>Add New Item:</h2>
+        <div class="input-group">
+          <label for="expense-types">Type:</label>
+          <select id="expense-types" name="Type">
+            <option value="Cash">Cash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="expense-type">Date:</label>
+          <input id="expense-date" type="date" />
+        </div>
+        <div class="input-group">
+          <label for="expense-name">Name:</label>
+          <input id="expense-name" type="text" />
+        </div>
+        <div class="input-group">
+          <label for="expense-amount">Amount:</label>
+          <input id="expense-amount" type="number" min="1" step="any" />
+        </div>
+        <div class="submit-expense">
+          <button id="add-expense">Add Expense</button>
+        </div>
+      </form>
+      <div class="table">
+        <table class="expense-table">
+          <colgroup>
+            <col span="1" style="width: 22.5%" />
+            <col span="1" style="width: 22.5%" />
+            <col span="1" style="width: 22.5%" />
+            <col span="1" style="width: 22.5%" />
+            <col span="1" style="width: 10%" />
+          </colgroup>
+          <thead class="expense-table-header">
+            <tr class="expense-table-header-row">
+              <th>Type</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody class="expense-table-body">
+            <tr class="expense-table-body-row">
+              <td>Cash</td>
+              <td>Car Installment</td>
+              <td>01/02/2023</td>
+              <td>500$</td>
+              <td>❌</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
